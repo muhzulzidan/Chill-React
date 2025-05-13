@@ -1,4 +1,4 @@
-import Hero from "../Elements/Hero/Hero.jsx";
+import Hero from "./../Elements/Hero/Hero.jsx";
 
 const ComponentHero = ({ heroTitle, heroDesc, heroBg }) => {
   return (

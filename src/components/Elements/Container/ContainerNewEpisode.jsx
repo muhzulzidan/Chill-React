@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NewEpisode from "../TagFilm/NewEpisode.jsx";
+import NewEpisode from "./../TagFilm/NewEpisode.jsx";
 
 const ContainerNewEpisode = ({ movie, image, onClick }) => {
   const [isDragging, setIsDragging] = useState(false);

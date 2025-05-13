@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TopTen from "../TagFilm/TopTen.jsx";
+import TopTen from "./../TagFilm/TopTen.jsx";
 const ContainerTopTen = ({ movie, image, onClick }) => {
   const [isDragging, setIsDragging] = useState(false);
   const posterPath = movie ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : image;

@@ -3,11 +3,11 @@ import { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Arrow from "../Elements/Arrow/Arrow.jsx"; // Pastikan path ini benar
-import MovieDetailModal from "../Elements/Container/MovieDetailModal.jsx"; // Pastikan path ini benar
-import ContinueWatching from "../Elements/ContinueWatch/ContinueWatching.jsx"; // Path ke komponen yang sudah ada
-import useFetchMovies from "../../hooks/useFetchMovies";
-import useMovieStore from '../../store/useMovieStore';
+import Arrow from "./../Elements/Arrow/Arrow.jsx"; // Pastikan path ini benar
+import MovieDetailModal from "./../Elements/Container/MovieDetailModal.jsx"; // Pastikan path ini benar
+import ContinueWatching from "./../Elements/ContinueWatch/ContinueWatching.jsx"; // Path ke komponen yang sudah ada
+import useFetchMovies from "./../../hooks/useFetchMovies";
+import useMovieStore from './../../store/useMovieStore';
 
 const ContinueWatchingFilm = () => {
   const { movies, loading, error } = useFetchMovies("/Melanjutkan");

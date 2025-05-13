@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import useMyListStore from "../../store/useMyListStore";
-import useAuthStore from "../../store/useAuthStore"; 
-import ContainerFilm from "../Elements/Container/ContainerFilm.jsx";
-import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle.jsx";
+import useMyListStore from "./../../store/useMyListStore";
+import useAuthStore from "./../../store/useAuthStore"; 
+import ContainerFilm from "./../Elements/Container/ContainerFilm.jsx";
+import HeadingTitle from "./../Elements/HeadingTitle/HeadingTitle.jsx";
 
 const MyList = () => {
   const { myList, fetchMyList } = useMyListStore();

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import api from "../api/axiosConfig";
+import api from "./../api/axiosConfig";
 
 const useFetchMovies = (endpoint = "/movies", property = null) => {
   const [movies, setMovies] = useState([]);

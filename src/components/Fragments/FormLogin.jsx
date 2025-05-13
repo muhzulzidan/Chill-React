@@ -1,5 +1,5 @@
-import InputForm from "../Elements/Input/index.jsx";
-import Forgot from "../Elements/Input/Forgot.jsx";
+import InputForm from "./../Elements/Input/index.jsx";
+import Forgot from "./../Elements/Input/Forgot.jsx";
 
 const FormLogin = ({ formData, onInputChange, onSubmit }) => {
   return (

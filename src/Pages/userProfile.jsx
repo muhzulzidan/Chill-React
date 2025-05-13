@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
-import useMyListStore from "../store/useMyListStore";
-import useAuthStore from "../store/useAuthStore";
-import WelcomeText from "../components/Elements/WelcomeText/WelcomeText.jsx";
-import ContainerFilm from "../components/Elements/Container/ContainerFilm.jsx";
-import HeadingTitle from "../components/Elements/HeadingTitle/HeadingTitle.jsx";
-import api from "../api/axiosConfig";
-import Navbar from "../components/Fragments/Navbar.jsx";
-import Footer from "../Components/Fragments/Footer.jsx";
+import useMyListStore from "./../store/useMyListStore";
+import useAuthStore from "./../store/useAuthStore";
+import WelcomeText from "./../components/Elements/WelcomeText/WelcomeText.jsx";
+import ContainerFilm from "./../components/Elements/Container/ContainerFilm.jsx";
+import HeadingTitle from "./../components/Elements/HeadingTitle/HeadingTitle.jsx";
+import api from "./../api/axiosConfig";
+import Navbar from "./../components/Fragments/Navbar.jsx";
+import Footer from "./../Components/Fragments/Footer.jsx";
 
 const UserProfile = () => {
   const [formData, setFormData] = useState({

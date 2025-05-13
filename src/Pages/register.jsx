@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import Button from "../components/Elements/button/Button.jsx";
-import Logo from "../components/Elements/Logo/Logo.jsx";
-import WelcomeText from "../components/Elements/WelcomeText/WelcomeText.jsx";
-import FormRegister from "../components/Fragments/FormRegister.jsx";
-import api from "../api/axiosConfig"; 
+import Button from "./../components/Elements/button/Button.jsx";
+import Logo from "./../components/Elements/Logo/Logo.jsx";
+import WelcomeText from "./../components/Elements/WelcomeText/WelcomeText.jsx";
+import FormRegister from "./../components/Fragments/FormRegister.jsx";
+import api from "./../api/axiosConfig"; 
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({

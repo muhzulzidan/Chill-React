@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Premium from "../TagFilm/Premium.jsx";
+import Premium from "./../TagFilm/Premium.jsx";
 
 const ContainerPremium = ({ movie, onClick }) => {
   const [isDragging, setIsDragging] = useState(false);

@@ -1,11 +1,11 @@
-import ComponentHero from "../components/Fragments/ComponentHero.jsx";
-import Footer from "../Components/Fragments/Footer.jsx";
-import Navbar from "../components/Fragments/Navbar.jsx";
-import ContinueWatchingFilmLayout from "../Components/Layout/ContinueWatchingFilmLayout.jsx";
-import NewReleaseLayout from "../Components/Layout/NewReleaseLayout.jsx";
-import SeriesOfferingLayout from "../Components/Layout/SeriesOfferingLayout.jsx";
-import TopRatingLayout from "../Components/Layout/TopRatingLayout.jsx";
-import TrendingLayout from "../Components/Layout/TrendingLayout.jsx";
+import ComponentHero from "./../components/Fragments/ComponentHero.jsx";
+import Footer from "./../Components/Fragments/Footer.jsx";
+import Navbar from "./../components/Fragments/Navbar.jsx";
+import ContinueWatchingFilmLayout from "./../Components/Layout/ContinueWatchingFilmLayout.jsx";
+import NewReleaseLayout from "./../Components/Layout/NewReleaseLayout.jsx";
+import SeriesOfferingLayout from "./../Components/Layout/SeriesOfferingLayout.jsx";
+import TopRatingLayout from "./../Components/Layout/TopRatingLayout.jsx";
+import TrendingLayout from "./../Components/Layout/TrendingLayout.jsx";
 
 const FilmPage = () => {
   return (
