@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
-import useMyListStore from "../store/useMyListStore.jsx";
+import useMyListStore from "../store/useMyListStore";
 import useAuthStore from "../store/useAuthStore";
 import WelcomeText from "../components/Elements/WelcomeText/WelcomeText.jsx";
 import ContainerFilm from "../components/Elements/Container/ContainerFilm.jsx";
