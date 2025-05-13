@@ -9,7 +9,7 @@ import ContainerFilm from "../components/Elements/Container/ContainerFilm";
 import HeadingTitle from "../components/Elements/HeadingTitle/HeadingTitle";
 import api from "../api/axiosConfig";
 import Navbar from "../components/Fragments/Navbar";
-import Footer from "../Components/Fragments/Footer";
+import Footer from "../Components/Fragments/Footer.jsx";
 
 const UserProfile = () => {
   const [formData, setFormData] = useState({
