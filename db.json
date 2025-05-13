@@ -1,0 +1,1004 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "card Alice in Borderland",
+      "description": "Arisu Ryohei—seorang pria muda yang tidak memiliki pekerjaan dan terobsesi dengan video game—tiba-tiba menemukan dirinya berada dalam versi Tokyo yang aneh dan kosong di mana dia dan teman-temannya harus bersaing dalam permainan berbahaya untuk bertahan hidup. Di dunia yang aneh ini, Arisu bertemu dengan Usagi, seorang wanita muda yang menjelajahi game sendirian. Setelah permainan berbahaya yang menguji batas Arisu, keduanya berangkat bersama untuk mengungkap satu demi satu misteri saat mereka mempertaruhkan nyawa dan menghadapi apa artinya hidup.",
+      "image": "/list-film/alice.png",
+      "rating": {
+        "imdb": "7.7/10",
+        "rotten_tomatoes": "86%"
+      },
+      "type": "Serial TV",
+      "genre": ["Fiksi Ilmiah", "Thriller", "Drama", "Survival"],
+      "age_rating": "18+",
+      "episodes": 16
+    },
+    {
+      "id": 2,
+      "title": "card All of Us Are Dead",
+      "description": "Sekelompok siswa terjebak di sekolah menengah saat wabah zombie menyebar. Mereka harus berjuang untuk bertahan hidup dan menemukan cara untuk melarikan diri dari sekolah yang terisolasi.",
+      "image": "/list-film/allofus.png",
+      "rating": {
+        "imdb": "7.6/10",
+        "rotten_tomatoes": "89%"
+      },
+      "type": "Serial TV",
+      "genre": ["Horor", "Zombie", "Drama", "Remaja"],
+      "age_rating": "18+",
+      "episodes": 12
+    },
+    {
+      "id": 3,
+      "title": "card Avatar: The Way of Water",
+      "description": "Jake Sully dan Neytiri membentuk keluarga dan berusaha untuk menjaga mereka tetap aman. Namun, mereka harus meninggalkan rumah dan menjelajahi bagian lain dari Pandora ketika ancaman baru muncul.",
+      "image": "/list-film/avatar.png",
+      "rating": {
+        "imdb": "7.8/10",
+        "rotten_tomatoes": "76%"
+      },
+      "type": "Film",
+      "genre": ["Fiksi Ilmiah", "Aksi", "Petualangan", "Fantasi"],
+      "age_rating": "13+",
+      "duration": "3j 12m"
+    },
+    {
+      "id": 4,
+      "title": "card The Batman",
+      "description": "Ketika seorang pembunuh berantai mulai menargetkan Gotham, Batman harus menyelidiki dan mengungkap kebenaran di balik kejahatan yang mengancam kota. Dalam prosesnya, ia menemukan korupsi yang mengakar di Gotham dan hubungan antara keluarganya dan para penjahat.",
+      "image": "/list-film/batman.png",
+      "rating": {
+        "imdb": "7.8/10",
+        "rotten_tomatoes": "85%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Kriminal", "Drama", "Misteri"],
+      "age_rating": "17+",
+      "duration": "2j 56m"
+    },
+    {
+      "id": 5,
+      "title": "card Baymax",
+      "description": "Baymax adalah robot perawat yang diciptakan untuk membantu orang-orang yang membutuhkan perawatan medis. Dalam serial ini, Baymax berkeliling kota San Fransokyo untuk membantu orang-orang dengan berbagai masalah kesehatan dan emosional.",
+      "image": "/list-film/baymax.png",
+      "rating": {
+        "imdb": "7.2/10",
+        "rotten_tomatoes": "93%"
+      },
+      "type": "Serial TV",
+      "genre": ["Animasi", "Komedi", "Keluarga", "Fiksi Ilmiah"],
+      "age_rating": "SU",
+      "episodes": 6
+    },
+    {
+      "id": 6,
+      "title": "card Big Hero 6",
+      "description": "Setelah kehilangan kakaknya, Hiro Hamada, seorang jenius robotika, bergabung dengan sekelompok teman untuk membentuk tim superhero yang berjuang melawan penjahat yang mengancam kota mereka.",
+      "image": "/list-film/bighero.png",
+      "rating": {
+        "imdb": "7.8/10",
+        "rotten_tomatoes": "90%"
+      },
+      "type": "Film",
+      "genre": ["Animasi", "Aksi", "Komedi", "Keluarga", "Fiksi Ilmiah"],
+      "age_rating": "SU",
+      "duration": "1j 42m"
+    },
+    {
+      "id": 7,
+      "title": "card Black Adam",
+      "description": "Film superhero aksi dari DC Universe.",
+      "image": "/list-film/blackadam.png",
+      "rating": {
+        "imdb": "6.2/10",
+        "rotten_tomatoes": "38%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Fantasi", "Fiksi Ilmiah", "Superhero"],
+      "age_rating": "13+",
+      "duration": "2j 5m"
+    },
+    {
+      "id": 8,
+      "title": "card Blue Lock",
+      "description": "Anime sepak bola intens menjelang piala dunia.",
+      "image": "/list-film/bluelock.png",
+      "rating": {
+        "imdb": "8.1/10",
+        "rotten_tomatoes": "N/A",
+        "my_anime_list": "8.35/10"
+      },
+      "type": "Serial TV",
+      "genre": ["Anime", "Olahraga", "Drama"],
+      "age_rating": "13+",
+      "episodes": 24
+    },
+    {
+      "id": 9,
+      "title": "card My Hero Academy",
+      "description": "Kisah para pahlawan muda dengan kekuatan luar biasa.",
+      "image": "/list-film/bokunohero.png",
+      "rating": {
+        "imdb": "8.2/10",
+        "rotten_tomatoes": "N/A",
+        "my_anime_list": "8.4/10"
+      },
+      "type": "Serial TV",
+      "genre": ["Anime", "Aksi", "Petualangan", "Superhero"],
+      "age_rating": "13+",
+      "episodes": 138
+    },
+    {
+      "id": 10,
+      "title": "card The Devil All The Time",
+      "description": "Film thriller psikologi menegangkan.",
+      "image": "/list-film/devilalltime.png",
+      "rating": {
+        "imdb": "7.1/10",
+        "rotten_tomatoes": "65%"
+      },
+      "type": "Film",
+      "genre": ["Kriminal", "Drama", "Thriller"],
+      "age_rating": "17+",
+      "duration": "2j 18m"
+    },
+    {
+      "id": 11,
+      "title": "card Dilan 1991",
+      "description": "Drama romansa anak remaja Indonesia.",
+      "image": "/list-film/dilan.png",
+      "rating": {
+        "imdb": "6.5/10",
+        "rotten_tomatoes": "N/A"
+      },
+      "type": "Film",
+      "genre": ["Drama", "Romantis"],
+      "age_rating": "13+",
+      "duration": "2j 1m"
+    },
+    {
+      "id": 12,
+      "title": "card Doctor Strange In The Multiverse of Madness",
+      "description": "Aksi Doctor Strange melintasi multiverse.",
+      "image": "/list-film/doctorstrange.png",
+      "rating": {
+        "imdb": "6.9/10",
+        "rotten_tomatoes": "73%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Fantasi", "Horor"],
+      "age_rating": "13+",
+      "duration": "2j 6m"
+    },
+    {
+      "id": 13,
+      "title": "card Don't Look Up",
+      "description": "Drama komedi tentang peringatan bencana yang diabaikan.",
+      "image": "/list-film/dontlookup.png",
+      "rating": {
+        "imdb": "7.2/10",
+        "rotten_tomatoes": "56%"
+      },
+      "type": "Film",
+      "genre": ["Komedi", "Drama", "Fiksi Ilmiah"],
+      "age_rating": "17+",
+      "duration": "2j 18m"
+    },
+    {
+      "id": 14,
+      "title": "card Fast and Furious X",
+      "description": "Aksi balap mobil gila-gilaan seri ke-10.",
+      "image": "/list-film/fastx.png",
+      "rating": {
+        "imdb": "5.8/10",
+        "rotten_tomatoes": "56%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Kriminal"],
+      "age_rating": "13+",
+      "duration": "2j 21m"
+    },
+    {
+      "id": 15,
+      "title": "card Guardian of Galaxy Vol 3",
+      "description": "Aksi seru para penjaga galaksi di luar angkasa.",
+      "image": "/list-film/guardian.png",
+      "rating": {
+        "imdb": "7.9/10",
+        "rotten_tomatoes": "82%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Fiksi Ilmiah"],
+      "age_rating": "13+",
+      "duration": "2j 30m"
+    },
+    {
+      "id": 16,
+      "title": "card Happiness (Drakor)",
+      "description": "Drama Korea bertahan hidup di tengah krisis.",
+      "image": "/list-film/happiness.png",
+      "rating": {
+        "imdb": "7.7/10",
+        "rotten_tomatoes": "N/A"
+      },
+      "type": "Serial TV",
+      "genre": ["Drama", "Thriller", "Fantasi"],
+      "age_rating": "17+",
+      "episodes": 12
+    },
+    {
+      "id": 17,
+      "title": "card Jurassic World Dominion",
+      "description": "Kembalinya dino di dunia modern.",
+      "image": "/list-film/jurassic.png",
+      "rating": {
+        "imdb": "5.6/10",
+        "rotten_tomatoes": "29%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Fiksi Ilmiah"],
+      "age_rating": "13+",
+      "duration": "2j 27m"
+    },
+    {
+      "id": 18,
+      "title": "card Drakor (belum tau judulnya)",
+      "description": "Drama Korea misterius.",
+      "image": "/list-film/korea.png",
+      "rating": {
+        "imdb": "N/A",
+        "rotten_tomatoes": "N/A"
+      },
+      "type": "Serial TV",
+      "genre": ["Misteri", "Drama"],
+      "age_rating": "N/A",
+      "episodes": "N/A"
+    },
+    {
+      "id": 19,
+      "title": "card Megan",
+      "description": "Boneka AI yang menimbulkan teror.",
+      "image": "/list-film/megan.png",
+      "rating": {
+        "imdb": "6.3/10",
+        "rotten_tomatoes": "93%"
+      },
+      "type": "Film",
+      "genre": ["Horor", "Fiksi Ilmiah", "Thriller"],
+      "age_rating": "17+",
+      "duration": "1j 42m"
+    },
+    {
+      "id": 20,
+      "title": "card The Little Mermaid",
+      "description": "Petualangan putri duyung mencari dunia baru.",
+      "image": "/list-film/mermaid.png",
+      "rating": {
+        "imdb": "7.2/10",
+        "rotten_tomatoes": "67%"
+      },
+      "type": "Film",
+      "genre": ["Petualangan", "Keluarga", "Fantasi", "Musikal"],
+      "age_rating": "SU",
+      "duration": "2j 15m"
+    },
+    {
+      "id": 21,
+      "title": "card Missing",
+      "description": "Kisah pencarian orang hilang misterius.",
+      "image": "/list-film/missing.png",
+      "rating": {
+        "imdb": "7.1/10",
+        "rotten_tomatoes": "88%"
+      },
+      "type": "Film",
+      "genre": ["Thriller", "Drama", "Misteri"],
+      "age_rating": "13+",
+      "duration": "1j 51m"
+    },
+    {
+      "id": 22,
+      "title": "card A Man Called Otto",
+      "description": "Drama lucu sekaligus menyentuh tentang tetangga pemarah.",
+      "image": "/list-film/otto.png",
+      "rating": {
+        "imdb": "7.5/10",
+        "rotten_tomatoes": "70%"
+      },
+      "type": "Film",
+      "genre": ["Komedi", "Drama"],
+      "age_rating": "13+",
+      "duration": "2j 6m"
+    },
+    {
+      "id": 23,
+      "title": "card Ant Man & Wasp: Quantumania",
+      "description": "Aksi pahlawan mini menjelajah quantum realm.",
+      "image": "/list-film/quantum.png",
+      "rating": {
+        "imdb": "6.0/10",
+        "rotten_tomatoes": "46%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Fiksi Ilmiah"],
+      "age_rating": "13+",
+      "duration": "2j 4m"
+    },
+    {
+      "id": 24,
+      "title": "card Rio",
+      "description": "Film animasi tentang burung biru di Brasil.",
+      "image": "/list-film/rio.png",
+      "rating": {
+        "imdb": "6.9/10",
+        "rotten_tomatoes": "72%"
+      },
+      "type": "Film",
+      "genre": ["Animasi", "Petualangan", "Komedi", "Keluarga"],
+      "age_rating": "SU",
+      "duration": "1j 36m"
+    },
+    {
+      "id": 25,
+      "title": "card Shazam",
+      "description": "Remaja dengan kekuatan dewa-dewa petir.",
+      "image": "/list-film/shazam.png",
+      "rating": {
+        "imdb": "7.0/10",
+        "rotten_tomatoes": "90%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Fantasi"],
+      "age_rating": "13+",
+      "duration": "2j 12m"
+    },
+    {
+      "id": 26,
+      "title": "card Sonic 2",
+      "description": "Kelanjutan petualangan si landak biru super cepat.",
+      "image": "/list-film/sonic.png",
+      "rating": {
+        "imdb": "6.5/10",
+        "rotten_tomatoes": "69%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Keluarga"],
+      "age_rating": "SU",
+      "duration": "2j 2m"
+    },
+    {
+      "id": 27,
+      "title": "card Spiderman: Multiverse?",
+      "description": "Aksi Spiderman Miles Morales di multiverse.",
+      "image": "/list-film/spiderman.png",
+      "rating": {
+        "imdb": "8.5/10",
+        "rotten_tomatoes": "95%"
+      },
+      "type": "Film",
+      "genre": ["Animasi", "Aksi", "Petualangan", "Fiksi Ilmiah"],
+      "age_rating": "SU",
+      "duration": "2j 20m"
+    },
+    {
+      "id": 28,
+      "title": "card Stuart Little",
+      "description": "Petualangan seru tikus kecil bernama Stuart.",
+      "image": "/list-film/stuart.png",
+      "rating": {
+        "imdb": "6.0/10",
+        "rotten_tomatoes": "67%"
+      },
+      "type": "Film",
+      "genre": ["Petualangan", "Komedi", "Keluarga", "Fantasi"],
+      "age_rating": "SU",
+      "duration": "1j 24m"
+    },
+    {
+      "id": 29,
+      "title": "card Suzume",
+      "description": "Anime Jepang petualangan dan fantasi.",
+      "image": "/list-film/suzume.png",
+      "rating": {
+        "imdb": "7.6/10",
+        "rotten_tomatoes": "96%",
+        "my_anime_list": "8.32/10"
+      },
+      "type": "Film",
+      "genre": ["Anime", "Petualangan", "Fantasi", "Drama"],
+      "age_rating": "13+",
+      "duration": "2j 2m"
+    },
+    {
+      "id": 30,
+      "title": "card Ted Lasso",
+      "description": "Pelatih bola unik dengan motivasi konyol.",
+      "image": "/list-film/tedlasso.png",
+      "rating": {
+        "imdb": "8.8/10",
+        "rotten_tomatoes": "92%"
+      },
+      "type": "Serial TV",
+      "genre": ["Komedi", "Drama", "Olahraga"],
+      "age_rating": "17+",
+      "episodes": 34
+    },
+    {
+      "id": 31,
+      "title": "card The Tomorrow War",
+      "description": "Perang melawan alien masa depan.",
+      "image": "/list-film/tomorrow.png",
+      "rating": {
+        "imdb": "6.5/10",
+        "rotten_tomatoes": "52%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Fiksi Ilmiah", "Thriller"],
+      "age_rating": "13+",
+      "duration": "2j 18m"
+    }
+  ],
+  "Melanjutkan": [
+    {
+      "id": 1,
+      "title": "Alice in Borderland",
+      "description": "Arisu Ryohei—seorang pria muda yang tidak memiliki pekerjaan dan terobsesi dengan video game—tiba-tiba menemukan dirinya berada dalam versi Tokyo yang aneh dan kosong di mana dia dan teman-temannya harus bersaing dalam permainan berbahaya untuk bertahan hidup. Di dunia yang aneh ini, Arisu bertemu dengan Usagi, seorang wanita muda yang menjelajahi game sendirian. Setelah permainan berbahaya yang menguji batas Arisu, keduanya berangkat bersama untuk mengungkap satu demi satu misteri saat mereka mempertaruhkan nyawa dan menghadapi apa artinya hidup.",
+      "image": "/list-film/1alice.png",
+      "rating": {
+        "imdb": "7.7/10",
+        "rotten_tomatoes": "86%"
+      },
+      "type": "Serial TV",
+      "genre": ["Fiksi Ilmiah", "Thriller", "Drama", "Survival"],
+      "age_rating": "18+",
+      "episodes": 16,
+      "watch_history": {
+        "last_watched_episode": 7,
+        "total_episodes": 16
+      }
+    },
+    {
+      "id": 2,
+      "title": "All of Us Are Dead",
+      "description": "Sekelompok siswa terjebak di sekolah menengah saat wabah zombie menyebar. Mereka harus berjuang untuk bertahan hidup dan menemukan cara untuk melarikan diri dari sekolah yang terisolasi.",
+      "image": "/list-film/1allofus.png",
+      "rating": {
+        "imdb": "7.6/10",
+        "rotten_tomatoes": "89%"
+      },
+      "type": "Serial TV",
+      "genre": ["Horor", "Zombie", "Drama", "Remaja"],
+      "age_rating": "18+",
+      "episodes": 12,
+      "watch_history": {
+        "last_watched_episode": 5,
+        "total_episodes": 12
+      }
+    },
+    {
+      "id": 3,
+      "title": "Avatar: The Way of Water",
+      "description": "Jake Sully dan Neytiri membentuk keluarga dan berusaha untuk menjaga mereka tetap aman. Namun, mereka harus meninggalkan rumah dan menjelajahi bagian lain dari Pandora ketika ancaman baru muncul.",
+      "image": "/list-film/1avatar.png",
+      "rating": {
+        "imdb": "7.8/10",
+        "rotten_tomatoes": "76%"
+      },
+      "type": "Film",
+      "genre": ["Fiksi Ilmiah", "Aksi", "Petualangan", "Fantasi"],
+      "age_rating": "13+",
+      "duration": "3j 12m",
+      "watch_history": {
+        "last_watched_duration": "1j 45m",
+        "total_duration": "3j 12m"
+      }
+    },
+    {
+      "id": 4,
+      "title": "The Batman",
+      "description": "Ketika seorang pembunuh berantai mulai menargetkan Gotham, Batman harus menyelidiki dan mengungkap kebenaran di balik kejahatan yang mengancam kota. Dalam prosesnya, ia menemukan korupsi yang mengakar di Gotham dan hubungan antara keluarganya dan para penjahat.",
+      "image": "/list-film/1batman.png",
+      "rating": {
+        "imdb": "7.8/10",
+        "rotten_tomatoes": "85%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Kriminal", "Drama", "Misteri"],
+      "age_rating": "17+",
+      "duration": "2j 56m",
+      "watch_history": {
+        "last_watched_duration": "2j 10m",
+        "total_duration": "2j 56m"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Baymax",
+      "description": "Baymax adalah robot perawat yang diciptakan untuk membantu orang-orang yang membutuhkan perawatan medis. Dalam serial ini, Baymax berkeliling kota San Fransokyo untuk membantu orang-orang dengan berbagai masalah kesehatan dan emosional.",
+      "image": "/list-film/1baymax.png",
+      "rating": {
+        "imdb": "7.2/10",
+        "rotten_tomatoes": "93%"
+      },
+      "type": "Serial TV",
+      "genre": ["Animasi", "Komedi", "Keluarga", "Fiksi Ilmiah"],
+      "age_rating": "SU",
+      "episodes": 6,
+      "watch_history": {
+        "last_watched_episode": 3,
+        "total_episodes": 6
+      }
+    },
+    {
+      "id": 6,
+      "title": "Big Hero 6",
+      "description": "Setelah kehilangan kakaknya, Hiro Hamada, seorang jenius robotika, bergabung dengan sekelompok teman untuk membentuk tim superhero yang berjuang melawan penjahat yang mengancam kota mereka.",
+      "image": "/list-film/1bighero.png",
+      "rating": {
+        "imdb": "7.8/10",
+        "rotten_tomatoes": "90%"
+      },
+      "type": "Film",
+      "genre": ["Animasi", "Aksi", "Komedi", "Keluarga", "Fiksi Ilmiah"],
+      "age_rating": "SU",
+      "duration": "1j 42m",
+      "watch_history": {
+        "last_watched_duration": "0j 50m",
+        "total_duration": "1j 42m"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Black Adam",
+      "description": "Film superhero aksi dari DC Universe.",
+      "image": "/list-film/1blackadam.png",
+      "rating": {
+        "imdb": "6.2/10",
+        "rotten_tomatoes": "38%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Fantasi", "Fiksi Ilmiah", "Superhero"],
+      "age_rating": "13+",
+      "duration": "2j 5m",
+      "watch_history": {
+        "last_watched_duration": "1j 15m",
+        "total_duration": "2j 5m"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Blue Lock",
+      "description": "Anime sepak bola intens menjelang piala dunia.",
+      "image": "/list-film/1bluelock.png",
+      "rating": {
+        "imdb": "8.1/10",
+        "rotten_tomatoes": "N/A",
+        "my_anime_list": "8.35/10"
+      },
+      "type": "Serial TV",
+      "genre": ["Anime", "Olahraga", "Drama"],
+      "age_rating": "13+",
+      "episodes": 24,
+      "watch_history": {
+        "last_watched_episode": 12,
+        "total_episodes": 24
+      }
+    },
+    {
+      "id": 9,
+      "title": "My Hero Academy",
+      "description": "Kisah para pahlawan muda dengan kekuatan luar biasa.",
+      "image": "/list-film/1bokunohero.png",
+      "rating": {
+        "imdb": "8.2/10",
+        "rotten_tomatoes": "N/A",
+        "my_anime_list": "8.4/10"
+      },
+      "type": "Serial TV",
+      "genre": ["Anime", "Aksi", "Petualangan", "Superhero"],
+      "age_rating": "13+",
+      "episodes": 138,
+      "watch_history": {
+        "last_watched_episode": 60,
+        "total_episodes": 138
+      }
+    },
+    {
+      "id": 10,
+      "title": "The Devil All The Time",
+      "description": "Film thriller psikologi menegangkan.",
+      "image": "/list-film/1devilalltime.png",
+      "rating": {
+        "imdb": "7.1/10",
+        "rotten_tomatoes": "65%"
+      },
+      "type": "Film",
+      "genre": ["Kriminal", "Drama", "Thriller"],
+      "age_rating": "17+",
+      "duration": "2j 18m",
+      "watch_history": {
+        "last_watched_duration": "1j 0m",
+        "total_duration": "2j 18m"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Dilan 1991",
+      "description": "Drama romansa anak remaja Indonesia.",
+      "image": "/list-film/1dilan.png",
+      "rating": {
+        "imdb": "6.5/10",
+        "rotten_tomatoes": "N/A"
+      },
+      "type": "Film",
+      "genre": ["Drama", "Romantis"],
+      "age_rating": "13+",
+      "duration": "2j 1m",
+      "watch_history": {
+        "last_watched_duration": "0j 45m",
+        "total_duration": "2j 1m"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Doctor Strange In The Multiverse of Madness",
+      "description": "Aksi Doctor Strange melintasi multiverse.",
+      "image": "/list-film/1doctorstrange.png",
+      "rating": {
+        "imdb": "6.9/10",
+        "rotten_tomatoes": "73%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Fantasi", "Horor"],
+      "age_rating": "13+",
+      "duration": "2j 6m",
+      "watch_history": {
+        "last_watched_duration": "1j 5m",
+        "total_duration": "2j 6m"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Don't Look Up",
+      "description": "Drama komedi tentang peringatan bencana yang diabaikan.",
+      "image": "/list-film/1dontlookup.png",
+      "rating": {
+        "imdb": "7.2/10",
+        "rotten_tomatoes": "56%"
+      },
+      "type": "Film",
+      "genre": ["Komedi", "Drama", "Fiksi Ilmiah"],
+      "age_rating": "17+",
+      "duration": "2j 18m",
+      "watch_history": {
+        "last_watched_duration": "2j 0m",
+        "total_duration": "2j 18m"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Fast and Furious X",
+      "description": "Aksi balap mobil gila-gilaan seri ke-10.",
+      "image": "/list-film/1fastx.png",
+      "rating": {
+        "imdb": "5.8/10",
+        "rotten_tomatoes": "56%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Kriminal"],
+      "age_rating": "13+",
+      "duration": "2j 21m",
+      "watch_history": {
+        "last_watched_duration": "1j 30m",
+        "total_duration": "2j 21m"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Guardian of Galaxy Vol 3",
+      "description": "Aksi seru para penjaga galaksi di luar angkasa.",
+      "image": "/list-film/1guardian.png",
+      "rating": {
+        "imdb": "7.9/10",
+        "rotten_tomatoes": "82%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Fiksi Ilmiah"],
+      "age_rating": "13+",
+      "duration": "2j 30m",
+      "watch_history": {
+        "last_watched_duration": "2j 0m",
+        "total_duration": "2j 30m"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Happiness (Drakor)",
+      "description": "Drama Korea bertahan hidup di tengah krisis.",
+      "image": "/list-film/1happiness.png",
+      "rating": {
+        "imdb": "7.7/10",
+        "rotten_tomatoes": "N/A"
+      },
+      "type": "Serial TV",
+      "genre": ["Drama", "Thriller", "Fantasi"],
+      "age_rating": "17+",
+      "episodes": 12,
+      "watch_history": {
+        "last_watched_episode": 8,
+        "total_episodes": 12
+      }
+    },
+    {
+      "id": 17,
+      "title": "Jurassic World Dominion",
+      "description": "Kembalinya dino di dunia modern.",
+      "image": "/list-film/1jurassic.png",
+      "rating": {
+        "imdb": "5.6/10",
+        "rotten_tomatoes": "29%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Fiksi Ilmiah"],
+      "age_rating": "13+",
+      "duration": "2j 27m",
+      "watch_history": {
+        "last_watched_duration": "1j 10m",
+        "total_duration": "2j 27m"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Drakor (belum tau judulnya)",
+      "description": "Drama Korea misterius.",
+      "image": "/list-film/1korea.png",
+      "rating": {
+        "imdb": "N/A",
+        "rotten_tomatoes": "N/A"
+      },
+      "type": "Serial TV",
+      "genre": ["Misteri", "Drama"],
+      "age_rating": "N/A",
+      "episodes": "N/A",
+      "watch_history": {
+        "last_watched_episode": "N/A",
+        "total_episodes": "N/A"
+      }
+    },
+    {
+      "id": 19,
+      "title": "Megan",
+      "description": "Boneka AI yang menimbulkan teror.",
+      "image": "/list-film/1megan.png",
+      "rating": {
+        "imdb": "6.3/10",
+        "rotten_tomatoes": "93%"
+      },
+      "type": "Film",
+      "genre": ["Horor", "Fiksi Ilmiah", "Thriller"],
+      "age_rating": "17+",
+      "duration": "1j 42m",
+      "watch_history": {
+        "last_watched_duration": "0j 55m",
+        "total_duration": "1j 42m"
+      }
+    },
+    {
+      "id": 20,
+      "title": "The Little Mermaid",
+      "description": "Petualangan putri duyung mencari dunia baru.",
+      "image": "/list-film/1mermaid.png",
+      "rating": {
+        "imdb": "7.2/10",
+        "rotten_tomatoes": "67%"
+      },
+      "type": "Film",
+      "genre": ["Petualangan", "Keluarga", "Fantasi", "Musikal"],
+      "age_rating": "SU",
+      "duration": "2j 15m",
+      "watch_history": {
+        "last_watched_duration": "1j 20m",
+        "total_duration": "2j 15m"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Missing",
+      "description": "Kisah pencarian orang hilang misterius.",
+      "image": "/list-film/1missing.png",
+      "rating": {
+        "imdb": "7.1/10",
+        "rotten_tomatoes": "88%"
+      },
+      "type": "Film",
+      "genre": ["Thriller", "Drama", "Misteri"],
+      "age_rating": "13+",
+      "duration": "1j 51m",
+      "watch_history": {
+        "last_watched_duration": "0j 40m",
+        "total_duration": "1j 51m"
+      }
+    },
+    {
+      "id": 22,
+      "title": "A Man Called Otto",
+      "description": "Drama lucu sekaligus menyentuh tentang tetangga pemarah.",
+      "image": "/list-film/1otto.png",
+      "rating": {
+        "imdb": "7.5/10",
+        "rotten_tomatoes": "70%"
+      },
+      "type": "Film",
+      "genre": ["Komedi", "Drama"],
+      "age_rating": "13+",
+      "duration": "2j 6m",
+      "watch_history": {
+        "last_watched_duration": "1j 0m",
+        "total_duration": "2j 6m"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Ant Man & Wasp: Quantumania",
+      "description": "Aksi pahlawan mini menjelajah quantum realm.",
+      "image": "/list-film/1quantum.png",
+      "rating": {
+        "imdb": "6.0/10",
+        "rotten_tomatoes": "46%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Fiksi Ilmiah"],
+      "age_rating": "13+",
+      "duration": "2j 4m",
+      "watch_history": {
+        "last_watched_duration": "1j 10m",
+        "total_duration": "2j 4m"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Rio",
+      "description": "Film animasi tentang burung biru di Brasil.",
+      "image": "/list-film/1rio.png",
+      "rating": {
+        "imdb": "6.9/10",
+        "rotten_tomatoes": "72%"
+      },
+      "type": "Film",
+      "genre": ["Animasi", "Petualangan", "Komedi", "Keluarga"],
+      "age_rating": "SU",
+      "duration": "1j 36m",
+      "watch_history": {
+        "last_watched_duration": "0j 30m",
+        "total_duration": "1j 36m"
+      }
+    },
+    {
+      "id": 25,
+      "title": "Shazam",
+      "description": "Remaja dengan kekuatan dewa-dewa petir.",
+      "image": "/list-film/1shazam.png",
+      "rating": {
+        "imdb": "7.0/10",
+        "rotten_tomatoes": "90%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Fantasi"],
+      "age_rating": "13+",
+      "duration": "2j 12m",
+      "watch_history": {
+        "last_watched_duration": "1j 0m",
+        "total_duration": "2j 12m"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Sonic 2",
+      "description": "Kelanjutan petualangan si landak biru super cepat.",
+      "image": "/list-film/1sonic.png",
+      "rating": {
+        "imdb": "6.5/10",
+        "rotten_tomatoes": "69%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Komedi", "Keluarga"],
+      "age_rating": "SU",
+      "duration": "2j 2m",
+      "watch_history": {
+        "last_watched_duration": "1j 5m",
+        "total_duration": "2j 2m"
+      }
+    },
+    {
+      "id": 27,
+      "title": "Spiderman: Multiverse?",
+      "description": "Aksi Spiderman Miles Morales di multiverse.",
+      "image": "/list-film/1spiderman.png",
+      "rating": {
+        "imdb": "8.5/10",
+        "rotten_tomatoes": "95%"
+      },
+      "type": "Film",
+      "genre": ["Animasi", "Aksi", "Petualangan", "Fiksi Ilmiah"],
+      "age_rating": "SU",
+      "duration": "2j 20m",
+      "watch_history": {
+        "last_watched_duration": "1j 15m",
+        "total_duration": "2j 20m"
+      }
+    },
+    {
+      "id": 28,
+      "title": "Stuart Little",
+      "description": "Petualangan seru tikus kecil bernama Stuart.",
+      "image": "/list-film/1stuart.png",
+      "rating": {
+        "imdb": "6.0/10",
+        "rotten_tomatoes": "67%"
+      },
+      "type": "Film",
+      "genre": ["Petualangan", "Komedi", "Keluarga", "Fantasi"],
+      "age_rating": "SU",
+      "duration": "1j 24m",
+      "watch_history": {
+        "last_watched_duration": "0j 40m",
+        "total_duration": "1j 24m"
+      }
+    },
+    {
+      "id": 29,
+      "title": "Suzume",
+      "description": "Anime Jepang petualangan dan fantasi.",
+      "image": "/list-film/1suzume.png",
+      "rating": {
+        "imdb": "7.6/10",
+        "rotten_tomatoes": "96%",
+        "my_anime_list": "8.32/10"
+      },
+      "type": "Film",
+      "genre": ["Anime", "Petualangan", "Fantasi", "Drama"],
+      "age_rating": "13+",
+      "duration": "2j 2m",
+      "watch_history": {
+        "last_watched_duration": "1j 0m",
+        "total_duration": "2j 2m"
+      }
+    },
+    {
+      "id": 30,
+      "title": "Ted Lasso",
+      "description": "Pelatih bola unik dengan motivasi konyol.",
+      "image": "/list-film/1tedlasso.png",
+      "rating": {
+        "imdb": "8.8/10",
+        "rotten_tomatoes": "92%"
+      },
+      "type": "Serial TV",
+      "genre": ["Komedi", "Drama", "Olahraga"],
+      "age_rating": "17+",
+      "episodes": 34,
+      "watch_history": {
+        "last_watched_episode": 10,
+        "total_episodes": 34
+      }
+    },
+    {
+      "id": 31,
+      "title": "The Tomorrow War",
+      "description": "Perang melawan alien masa depan.",
+      "image": "/list-film/1tomorrow.png",
+      "rating": {
+        "imdb": "6.5/10",
+        "rotten_tomatoes": "52%"
+      },
+      "type": "Film",
+      "genre": ["Aksi", "Petualangan", "Fiksi Ilmiah", "Thriller"],
+      "age_rating": "13+",
+      "duration": "2j 18m",
+      "watch_history": {
+        "last_watched_duration": "1j 20m",
+        "total_duration": "2j 18m"
+      }
+    }
+  ]
+}

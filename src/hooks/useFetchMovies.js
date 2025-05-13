@@ -1,14 +1,7 @@
 import { useState, useEffect } from "react";
-import {
-  getMoviesPopular,
-  getMoviesTrending,
-  getMoviesNewRelease,
-  getMoviesWatchingFilm,
-  getMoviesWatchingSeries,
-  getMoviesOffering,
-} from "../api/moviesApi";
+import api from "../api/axiosConfig";
 
-const useFetchMovies = (category) => {
+const useFetchMovies = (endpoint = "/movies", property = null) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,21 +9,8 @@ const useFetchMovies = (category) => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        let data = [];
-        if (category === "watchingFilm") {
-          data = await getMoviesWatchingFilm();
-        } else if (category === "popular") {
-          data = await getMoviesPopular();
-        } else if (category === "trending") {
-          data = await getMoviesTrending();
-        } else if (category === "new") {
-          data = await getMoviesNewRelease();
-        } else if (category === "watchingSeries") {
-          data = await getMoviesWatchingSeries();
-        } else if (category === "offering") {
-          data = await getMoviesOffering();
-        }
-
+        const response = await api.get(endpoint); // Ambil data dari endpoint
+        const data = property ? response.data[property] : response.data; // Ambil properti tertentu jika diberikan
         setMovies(data);
       } catch (error) {
         setError(error);
@@ -40,7 +20,7 @@ const useFetchMovies = (category) => {
     };
 
     fetchMovies();
-  }, [category]);
+  }, [endpoint, property]);
 
   return { movies, loading, error };
 };

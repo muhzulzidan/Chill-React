@@ -1,11 +1,14 @@
-import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle";
-import ContinueWatchingFilm from "../Fragments/ContinueWatchingFilm";
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle"; // Pastikan path ini benar
+import ContinueWatchingFilm from "../Fragments/ContinueWatchingFilm"; // Pastikan path ini benar
 
 const ContinueWatchingFilmLayout = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-[235px] sm:h-[309px] py-5 sm:py-10 px-40 sm:px-80 gap-5 sm:gap-8">
+
+    <div className="flex flex-col items-center w-full max-w-[1280px] mx-auto h-[162px] pt-10 pb-10 gap-6 mb-20">
       <HeadingTitle title={"Melanjutkan Tonton Film"} />
-      <ContinueWatchingFilm />
+      <div className="w-full"> 
+        <ContinueWatchingFilm />
+      </div>
     </div>
   );
 };

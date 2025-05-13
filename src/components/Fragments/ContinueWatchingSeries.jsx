@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Arrow from "../Elements/Arrow/Arrow";
 import MovieDetailModal from "../Elements/Container/MovieDetailModal";
-import ContinueWatching from "../Elements/ContinueWatching/ContinueWatching";
+import ContinueWatching from "../Elements/ContinueWatch/ContinueWatching";
 import useFetchMovies from "../../hooks/useFetchMovies";
 import useMovieStore from "../../store/useMovieStore";
 
 const ContinueWatchingSeries = () => {
-  const { movies, loading, error } = useFetchMovies("watchingSeries");
+  const { movies, loading, error } = useFetchMovies("/Melanjutkan");
   const { selectedMovie, setSelectedMovie, clearSelectedMovie } =
     useMovieStore();
   const sliderRef = useRef(null);

@@ -1,10 +1,12 @@
-import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle";
-
-import TopRating from "../Fragments/TopRating";
+// src/components/Layouts/TopRatingLayout.jsx
+import React from 'react';
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle"; // Pastikan path ini benar
+import TopRating from "../Fragments/TopRating";       // Pastikan path ini benar
 
 const TopRatingLayout = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-[189px] sm:h-[512px] py-4 px-10 sm:px-80 gap-8 mt-6 sm:mt-0">
+    <div className="flex flex-col items-center w-full max-w-[1280px] mx-auto py-6 sm:py-10 gap-6"
+    >
       <HeadingTitle title="Top Rating Film dan Series Hari ini" />
       <TopRating />
     </div>
