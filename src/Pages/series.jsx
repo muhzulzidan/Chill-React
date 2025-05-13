@@ -1,11 +1,11 @@
-import ComponentHero from "../components/Fragments/ComponentHero";
-import Footer from "../Components/Fragments/Footer";
-import Navbar from "../components/Fragments/Navbar";
-import ContinueWatchingSeriesLayout from "../Components/Layout/ContinueWatchingSeriesLayout";
-import NewReleaseLayout from "../Components/Layout/NewReleaseLayout";
-import SeriesOfferingLayout from "../Components/Layout/SeriesOfferingLayout";
-import TopRatingLayout from "../Components/Layout/TopRatingLayout";
-import TrendingLayout from "../Components/Layout/TrendingLayout";
+import ComponentHero from "../components/Fragments/ComponentHero.jsx";
+import Footer from "../Components/Fragments/Footer.jsx";
+import Navbar from "../components/Fragments/Navbar.jsx";
+import ContinueWatchingSeriesLayout from "../Components/Layout/ContinueWatchingSeriesLayout.jsx";
+import NewReleaseLayout from "../Components/Layout/NewReleaseLayout.jsx";
+import SeriesOfferingLayout from "../Components/Layout/SeriesOfferingLayout.jsx";
+import TopRatingLayout from "../Components/Layout/TopRatingLayout.jsx";
+import TrendingLayout from "../Components/Layout/TrendingLayout.jsx";
 
 const SeriesPage = () => {
   return <div className="bg-[#181A1C]">

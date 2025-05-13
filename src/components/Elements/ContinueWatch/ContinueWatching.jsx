@@ -1,7 +1,7 @@
 // src/components/Elements/ContinueWatch/ContinueWatching.jsx
 import React, { useState, useRef, useCallback } from 'react';
 import ReactDOM from 'react-dom';
-import MovieHoverCard from '../MovieCard/MovieHoverCard'; // Pastikan path ini benar
+import MovieHoverCard from '../MovieCard/MovieHoverCard.jsx'; // Pastikan path ini benar
 
 const ContinueWatching = ({ movie, className }) => {
   const [isHoverCardVisible, setIsHoverCardVisible] = useState(false);

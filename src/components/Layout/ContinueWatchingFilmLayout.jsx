@@ -1,5 +1,5 @@
-import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle"; // Pastikan path ini benar
-import ContinueWatchingFilm from "../Fragments/ContinueWatchingFilm"; // Pastikan path ini benar
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle.jsx"; // Pastikan path ini benar
+import ContinueWatchingFilm from "../Fragments/ContinueWatchingFilm.jsx"; // Pastikan path ini benar
 
 const ContinueWatchingFilmLayout = () => {
   return (

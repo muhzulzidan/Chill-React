@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Input from "./Input";
-import Label from "./Label";
+import Input from "./Input.jsx";
+import Label from "./Label.jsx";
 
 const InputForm = ({ label, name, type, placeholder, img, onChange, value }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);

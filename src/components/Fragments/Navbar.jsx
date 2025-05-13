@@ -1,6 +1,6 @@
 import Logo from "../Elements/Logo/Logo"
 import { Link } from "react-router-dom"
-import DropDownProfile from "./DropDownProfile"
+import DropDownProfile from "./DropDownProfile.jsx"
 
 const Navbar = ({ hideLogoText = false }) => {
     return (

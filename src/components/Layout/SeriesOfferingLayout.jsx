@@ -1,5 +1,5 @@
-import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle"
-import SeriesOffering from "../Fragments/SeriesOffering"
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle.jsx"
+import SeriesOffering from "../Fragments/SeriesOffering.jsx"
 
 const SeriesOfferingLayout = () => {
     return (

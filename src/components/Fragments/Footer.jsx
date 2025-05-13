@@ -1,4 +1,4 @@
-import Logo from "../Elements/Logo/Logo";
+import Logo from "../Elements/Logo/Logo.jsx";
 
 const Footer = () => {
   return (

@@ -2,9 +2,9 @@ import { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Arrow from "../Elements/Arrow/Arrow";
-import MovieDetailModal from "../Elements/Container/MovieDetailModal";
-import ContinueWatching from "../Elements/ContinueWatch/ContinueWatching";
+import Arrow from "../Elements/Arrow/Arrow.jsx";
+import MovieDetailModal from "../Elements/Container/MovieDetailModal.jsx";
+import ContinueWatching from "../Elements/ContinueWatch/ContinueWatching.jsx";
 import useFetchMovies from "../../hooks/useFetchMovies";
 import useMovieStore from "../../store/useMovieStore";
 

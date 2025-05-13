@@ -1,5 +1,5 @@
-import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle";
-import ContinueWatchingSeries from "../Fragments/ContinueWatchingSeries";
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle.jsx";
+import ContinueWatchingSeries from "../Fragments/ContinueWatchingSeries.jsx";
 
 const ContinueWatchingSeriesLayout = () => {
   return (

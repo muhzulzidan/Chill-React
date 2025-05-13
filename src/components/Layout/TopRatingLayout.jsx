@@ -1,7 +1,7 @@
 // src/components/Layouts/TopRatingLayout.jsx
 import React from 'react';
-import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle"; // Pastikan path ini benar
-import TopRating from "../Fragments/TopRating";       // Pastikan path ini benar
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle.jsx"; // Pastikan path ini benar
+import TopRating from "../Fragments/TopRating.jsx";       // Pastikan path ini benar
 
 const TopRatingLayout = () => {
   return (

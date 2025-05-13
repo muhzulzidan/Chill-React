@@ -1,5 +1,5 @@
-import InputForm from "../Elements/Input/index";
-import Forgot from "../Elements/Input/Forgot";
+import InputForm from "../Elements/Input/index.jsx";
+import Forgot from "../Elements/Input/Forgot.jsx";
 
 const FormRegister = ({ onInputChange, formData, onSubmit,showForgot = true }) => {
   return (

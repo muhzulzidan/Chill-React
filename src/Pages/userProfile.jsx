@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
-import useMyListStore from "../store/useMyListStore";
+import useMyListStore from "../store/useMyListStore.jsx";
 import useAuthStore from "../store/useAuthStore";
-import WelcomeText from "../components/Elements/WelcomeText/WelcomeText";
-import ContainerFilm from "../components/Elements/Container/ContainerFilm";
-import HeadingTitle from "../components/Elements/HeadingTitle/HeadingTitle";
+import WelcomeText from "../components/Elements/WelcomeText/WelcomeText.jsx";
+import ContainerFilm from "../components/Elements/Container/ContainerFilm.jsx";
+import HeadingTitle from "../components/Elements/HeadingTitle/HeadingTitle.jsx";
 import api from "../api/axiosConfig";
-import Navbar from "../components/Fragments/Navbar";
+import Navbar from "../components/Fragments/Navbar.jsx";
 import Footer from "../Components/Fragments/Footer.jsx";
 
 const UserProfile = () => {

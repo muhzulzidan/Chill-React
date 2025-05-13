@@ -1,6 +1,6 @@
-import Footer from "../Components/Fragments/Footer";
-import MyList from "../Components/Fragments/MyList";
-import Navbar from "../components/Fragments/Navbar";
+import Footer from "../Components/Fragments/Footer.jsx";
+import MyList from "../Components/Fragments/MyList.jsx";
+import Navbar from "../components/Fragments/Navbar.jsx";
 
 const MyListPage = () => {
   return (
