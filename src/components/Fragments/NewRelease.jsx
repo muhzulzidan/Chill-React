@@ -21,11 +21,10 @@ const NewRelease = () => {
 
   const portalRoot = document.getElementById("movie-hover-card-portal-root");
 
-  // Ambil data secara acak dari db.json
   useEffect(() => {
     const allMovies = melanjutkanData.movies || [];
-    const shuffledMovies = allMovies.sort(() => 0.5 - Math.random()); // Acak data
-    setMovies(shuffledMovies.slice(0, 10)); // Ambil 10 film/serial secara acak
+    const shuffledMovies = allMovies.sort(() => 0.5 - Math.random()); 
+    setMovies(shuffledMovies.slice(0, 10)); 
   }, []);
 
   const calculateExactPosition = useCallback((targetElement) => {

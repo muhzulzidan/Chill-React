@@ -7,7 +7,7 @@ import useFetchMovies from "../../hooks/useFetchMovies.js";
 import melanjutkanData from "../../../db.json"; // Import data dari db.json
 
 const Trending = () => {
-  const { movies, loading, error } = useFetchMovies("/movies");
+  const { movies, loading, error } = useFetchMovies("/api/movies");
   const [hoveredMovie, setHoveredMovie] = useState(null);
   const [hoverCardStyle, setHoverCardStyle] = useState({
     opacity: 0,
@@ -22,10 +22,8 @@ const Trending = () => {
 
   const portalRoot = document.getElementById("movie-hover-card-portal-root");
 
-  // Filter hanya film
   const trendingMovies = movies?.filter((movie) => movie.type === "Film") || [];
 
-  // Fungsi untuk mencocokkan data dari "Melanjutkan"
   const getMovieDataFromMelanjutkan = useCallback((originalTitleFromMovies) => {
     const normalizedTitle = originalTitleFromMovies.replace(/^card\s+/i, "").trim().toLowerCase();
     return melanjutkanData.Melanjutkan.find(

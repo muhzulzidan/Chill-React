@@ -1,4 +1,3 @@
-// src/components/Elements/MovieCard/MovieHoverCardV2.jsx
 import { PlayIcon, CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
@@ -6,20 +5,19 @@ const MovieHoverCardV2 = ({ movie }) => {
   const {
     title = "Judul Tidak Tersedia",
     image,
-    type = "Info", // Default jika tipe tidak ada
+    type = "Info", 
     duration,
     episodes,
-    genre = [], // Default ke array kosong
+    genre = [],  
     age_rating,
-  } = movie || {}; // Default ke objek kosong jika movie prop undefined
-
+  } = movie || {}; 
   let displayInfo = "";
   if (type === "Film") {
     displayInfo = duration || "Durasi N/A";
   } else if (type === "Serial TV") {
     displayInfo = episodes ? `${episodes} Episode` : "Episode N/A";
   } else {
-    displayInfo = type; // Tampilkan tipe jika bukan Film/Serial TV atau jika tidak ada info lain
+    displayInfo = type;  
   }
 
   const posterImage = image || "https://placehold.co/300x180/141414/FFFFFF?text=No+Image";
@@ -32,7 +30,7 @@ const MovieHoverCardV2 = ({ movie }) => {
           alt={`Poster ${title}`} 
           className="w-full h-full object-cover"
           onError={(e) => { 
-            e.target.onerror = null; // Mencegah loop jika placeholder juga error
+            e.target.onerror = null; 
             e.target.src = "https://placehold.co/300x180/141414/FFFFFF?text=Error";
             e.target.alt = "Gagal memuat gambar";
           }}
@@ -45,14 +43,14 @@ const MovieHoverCardV2 = ({ movie }) => {
             <button 
               title="Play"
               className="bg-white text-black hover:bg-gray-200 w-9 h-9 flex items-center justify-center rounded-full transition-colors duration-150"
-              onClick={() => console.log("Play V2:", title)} // Tambahkan onClick handler
+              onClick={() => console.log("Play V2:", title)}  
             >
-              <PlayIcon className="h-5 w-5" /> {/* Ukuran ikon konsisten */}
+              <PlayIcon className="h-5 w-5" />  
             </button>
             <button 
               title="Tambahkan ke Daftar"
               className="bg-white/20 border border-white/30 text-white hover:bg-white/30 w-9 h-9 flex items-center justify-center rounded-full transition-colors duration-150"
-              onClick={() => console.log("Check V2:", title)} // Tambahkan onClick handler
+              onClick={() => console.log("Check V2:", title)}  
             >
               <CheckIcon className="h-5 w-5" />
             </button>
@@ -60,7 +58,7 @@ const MovieHoverCardV2 = ({ movie }) => {
           <button 
             title="Info Lebih Lanjut"
             className="bg-white/20 border border-white/30 text-white hover:bg-white/30 w-9 h-9 flex items-center justify-center rounded-full transition-colors duration-150"
-            onClick={() => console.log("More Info V2:", title)} // Tambahkan onClick handler
+            onClick={() => console.log("More Info V2:", title)}  
           >
             <ChevronDownIcon className="h-5 w-5" />
           </button>
@@ -77,7 +75,7 @@ const MovieHoverCardV2 = ({ movie }) => {
 
         <div className="flex flex-wrap items-center text-xs text-gray-400">
           {genre.slice(0, 3).map((g, i, arr) => (
-            <React.Fragment key={`${g}-${i}`}> {/* Key lebih unik */}
+            <React.Fragment key={`${g}-${i}`}> 
               <span>{g}</span>
               {i < arr.length - 1 && <span className="mx-1.5 text-gray-600">•</span>}
             </React.Fragment>

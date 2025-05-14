@@ -7,7 +7,7 @@ import useFetchMovies from "../../hooks/useFetchMovies.js";
 import melanjutkanData from "../../../db.json";
 
 const TopRating = () => {
-  const { movies, loading, error } = useFetchMovies("/movies");
+  const { movies, loading, error } = useFetchMovies("/api/movies");
   const [hoveredMovie, setHoveredMovie] = useState(null);
   const [hoverCardStyle, setHoverCardStyle] = useState({
     opacity: 0,

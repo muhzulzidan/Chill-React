@@ -1,4 +1,3 @@
-// File: src/components/Fragments/ContinueWatchingFilm.jsx
 import { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,18 +9,16 @@ import useFetchMovies from "../../hooks/useFetchMovies.js";
 import useMovieStore from '../../store/useMovieStore.js';
 
 const ContinueWatchingFilm = () => {
-  const { movies, loading, error } = useFetchMovies("/Melanjutkan");
+  const { movies, loading, error } = useFetchMovies("/api/Melanjutkan");
   const { selectedMovie, setSelectedMovie, clearSelectedMovie } = useMovieStore();
   const sliderRef = useRef(null);
-
-  // Tinggi item slider kembali ke 162px
   const sliderItemHeight = "h-[162px]";
 
   if (loading) return <div className={`${sliderItemHeight} flex justify-center items-center w-full`}><p>Loading movies...</p></div>;
   if (error) return <div className={`${sliderItemHeight} flex justify-center items-center w-full`}><p>Error: {error.message}</p></div>;
   if (!movies || movies.length === 0) return <div className={`${sliderItemHeight} flex justify-center items-center w-full`}><p>No movies to display.</p></div>;
 
-  const slidesToShowCount = 4; // Default slidesToShow untuk desktop
+  const slidesToShowCount = 4;
 
   const settings = {
     dots: false,
@@ -32,7 +29,7 @@ const ContinueWatchingFilm = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1280, // Cocok dengan max-width layout
+        breakpoint: 1280,  
         settings: {
           slidesToShow: slidesToShowCount, // 4 item pada 1280px
           slidesToScroll: slidesToShowCount,
@@ -66,7 +63,7 @@ const ContinueWatchingFilm = () => {
   const itemPadding = "px-[12px]";
 
   return (
-    <div className={`relative w-full ${sliderItemHeight} group`}> {/* Tinggi slider utama */}
+    <div className={`relative w-full ${sliderItemHeight} group`}>  
       <Arrow
         onScrollLeft={() => sliderRef.current?.slickPrev()}
         onScrollRight={() => sliderRef.current?.slickNext()}
@@ -75,15 +72,14 @@ const ContinueWatchingFilm = () => {
       <Slider
         ref={sliderRef}
         {...settings}
-        className="h-full" // Slider mengisi tinggi kontainer
+        className="h-full"  
       >
         {movies.map((movie) => (
-          // Wrapper item, menerapkan tinggi dan padding untuk gap
           <div key={movie.id} className={`${sliderItemHeight} ${itemPadding}`}>
             <ContinueWatching
               movie={movie}
               onClick={() => setSelectedMovie(movie)}
-              className="w-full h-full" // ContinueWatching akan mengisi wrapper ini
+              className="w-full h-full"  
             />
           </div>
         ))}

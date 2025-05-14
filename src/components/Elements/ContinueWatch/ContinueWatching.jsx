@@ -1,7 +1,7 @@
-// src/components/Elements/ContinueWatch/ContinueWatching.jsx
+/* eslint-disable no-unused-vars */
 import React, { useState, useRef, useCallback } from 'react';
 import ReactDOM from 'react-dom';
-import MovieHoverCard from '../MovieCard/MovieHoverCard.jsx'; // Pastikan path ini benar
+import MovieHoverCard from '../MovieCard/MovieHoverCard.jsx';  
 
 const ContinueWatching = ({ movie, className }) => {
   const [isHoverCardVisible, setIsHoverCardVisible] = useState(false);
@@ -71,7 +71,6 @@ const ContinueWatching = ({ movie, className }) => {
         className="w-full object-cover" 
       />
 
-      {/* Overlay Judul + Rating */}
       <div 
         className="absolute bottom-0 left-0 right-0 z-10 px-3 py-2 pointer-events-none"
         style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}
@@ -84,7 +83,6 @@ const ContinueWatching = ({ movie, className }) => {
         )}
       </div>
 
-      {/* Hover Card yang muncul di tengah posisi card (membesar) */}
       {isHoverCardVisible && portalRoot && ReactDOM.createPortal(
         <div
           style={{
