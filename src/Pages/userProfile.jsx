@@ -4,12 +4,12 @@ import { toast, ToastContainer } from "react-toastify";
 
 import useMyListStore from "./../store/useMyListStore";
 import useAuthStore from "./../store/useAuthStore";
-import WelcomeText from "./../components/Elements/WelcomeText/WelcomeText.jsx";
-import ContainerFilm from "./../components/Elements/Container/ContainerFilm.jsx";
-import HeadingTitle from "./../components/Elements/HeadingTitle/HeadingTitle.jsx";
+import WelcomeText from "../Components/Elements/WelcomeText/WelcomeText.jsx";
+import ContainerFilm from "../Components/Elements/Container/ContainerFilm.jsx";
+import HeadingTitle from "../Components/Elements/HeadingTitle/HeadingTitle.jsx";
 import api from "./../api/axiosConfig";
-import Navbar from "./../components/Fragments/Navbar.jsx";
-import Footer from "./../Components/Fragments/Footer.jsx";
+import Navbar from "../Components/Fragments/Navbar.jsx";
+import Footer from "../Components/Fragments/Footer.jsx";
 
 const UserProfile = () => {
   const [formData, setFormData] = useState({

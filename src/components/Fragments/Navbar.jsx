@@ -1,4 +1,4 @@
-import Logo from "../Elements/Logo/Logo"
+import Logo from "../Elements/Logo/Logo.jsx"
 import { Link } from "react-router-dom"
 import DropDownProfile from "./DropDownProfile.jsx"
 

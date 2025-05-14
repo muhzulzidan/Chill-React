@@ -1,9 +1,9 @@
 import React, { useState, useRef, useCallback } from "react";
 import Slider from "react-slick";
 import ReactDOM from "react-dom";
-import Arrow from "./../Elements/Arrow/Arrow.jsx";
-import MovieHoverCardV2 from "./../Elements/MovieCard/MovieHoverCardV2.jsx";
-import melanjutkanData from "./../../../db.json"; // Import data dari db.json
+import Arrow from "../Elements/Arrow/Arrow.jsx";
+import MovieHoverCardV2 from "../Elements/MovieCard/MovieHoverCardV2.jsx";
+import melanjutkanData from "../../../db.json"; // Import data dari db.json
 
 const SeriesOffering = () => {
   const [hoveredMovie, setHoveredMovie] = useState(null);

@@ -1,5 +1,5 @@
-import HeadingTitle from "./../Elements/HeadingTitle/HeadingTitle.jsx";
-import Trending from "./../Fragments/Trending.jsx";
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle.jsx";
+import Trending from "../Fragments/Trending.jsx";
 
 const TrendingLayout = () => {
   return (

@@ -1,10 +1,10 @@
 import React, { useState, useRef, useCallback } from "react";
 import Slider from "react-slick";
 import ReactDOM from "react-dom";
-import Arrow from "./../Elements/Arrow/Arrow.jsx";
-import MovieHoverCardV2 from "./../Elements/MovieCard/MovieHoverCardV2.jsx";
-import useFetchMovies from "./../../hooks/useFetchMovies";
-import melanjutkanData from "./../../../db.json";
+import Arrow from "../Elements/Arrow/Arrow.jsx";
+import MovieHoverCardV2 from "../Elements/MovieCard/MovieHoverCardV2.jsx";
+import useFetchMovies from "../../hooks/useFetchMovies.js";
+import melanjutkanData from "../../../db.json";
 
 const TopRating = () => {
   const { movies, loading, error } = useFetchMovies("/movies");

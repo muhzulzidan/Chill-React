@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaPlay, FaRegBookmark, FaBookmark } from "react-icons/fa";
-import useMyListStore from "./../../../store/useMyListStore";
-import useAuthStore from "./../../../store/useAuthStore";
+import useMyListStore from "../../../store/useMyListStore";
+import useAuthStore from "../../../store/useAuthStore";
 
 const MovieDetailModal = ({ movie, onClose }) => {
   const { myList, addToMyList, removeFromMyList } = useMyListStore();

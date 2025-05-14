@@ -1,10 +1,10 @@
-import Navbar from "./../components/Fragments/Navbar.jsx";
-import ComponentHero from "./../components/Fragments/ComponentHero.jsx";
-import ContinueWatchingFilmLayout from "./../Components/Layout/ContinueWatchingFilmLayout.jsx";
-import TopRatingLayout from "./../Components/Layout/TopRatingLayout.jsx";
-import TrendingLayout from "./../Components/Layout/TrendingLayout.jsx";
-import NewReleaseLayout from "./../Components/Layout/NewReleaseLayout.jsx";
-import Footer from "./../Components/Fragments/Footer.jsx";
+import Navbar from "../Components/Fragments/Navbar.jsx";
+import ComponentHero from "../Components/Fragments/ComponentHero.jsx";
+import ContinueWatchingFilmLayout from "../Components/Layout/ContinueWatchingFilmLayout.jsx";
+import TopRatingLayout from "../Components/Layout/TopRatingLayout.jsx";
+import TrendingLayout from "../Components/Layout/TrendingLayout.jsx";
+import NewReleaseLayout from "../Components/Layout/NewReleaseLayout.jsx";
+import Footer from "../Components/Fragments/Footer.jsx";
 
 const Home = () => {
   return (

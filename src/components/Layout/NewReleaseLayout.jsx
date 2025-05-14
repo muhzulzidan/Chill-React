@@ -1,5 +1,5 @@
-import HeadingTitle from "./../Elements/HeadingTitle/HeadingTitle.jsx";
-import NewRelease from "./../Fragments/NewRelease.jsx";
+import HeadingTitle from "../Elements/HeadingTitle/HeadingTitle.jsx";
+import NewRelease from "../Fragments/NewRelease.jsx";
 
 const NewReleaseLayout = () => {
   return (

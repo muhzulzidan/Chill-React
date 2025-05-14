@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import useAuthStore from "./../store/useAuthStore";
-import Button from "./../components/Elements/button/Button.jsx";
-import Logo from "./../components/Elements/Logo/Logo.jsx";
-import WelcomeText from "./../components/Elements/WelcomeText/WelcomeText.jsx";
-import FormLogin from "./../components/Fragments/FormLogin.jsx";
+import Button from "../Components/Elements/button/Button.jsx";
+import Logo from "../Components/Elements/Logo/Logo.jsx";
+import WelcomeText from "../Components/Elements/WelcomeText/WelcomeText.jsx";
+import FormLogin from "../Components/Fragments/FormLogin.jsx";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
