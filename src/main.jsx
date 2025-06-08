@@ -1,7 +1,8 @@
 import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate, Outlet } from "react-router-dom";
+import AuthRedirect from "./Components/AuthRedirect";
 import LoginPage from "./Pages/login";
 import RegisterPage from "./Pages/register";
 import ErrorPage from "./Pages/error";
@@ -10,41 +11,47 @@ import MyListPage from "./Pages/mylist";
 import SeriesPage from "./Pages/series";
 import FilmPage from "./Pages/film";
 import UserProfile from "./Pages/userProfile";
+import useAuthStore from "./store/useAuthStore";
 
+// ProtectedRoute component using Zustand
+// eslint-disable-next-line react-refresh/only-export-components
+function ProtectedRoute() {
+  const token = useAuthStore.getState().token;
+  return token ? <Outlet /> : <Navigate to="/login" replace />;
+}
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LoginPage />,
+    element: <AuthRedirect><LoginPage /></AuthRedirect>,
     errorElement: <ErrorPage />,
   },
   {
     path: "/login",
-    element: <LoginPage />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
+    element: <AuthRedirect><LoginPage /></AuthRedirect>,
   },
   {
     path: "/register",
-    element: <RegisterPage />,
+    element: <AuthRedirect><RegisterPage /></AuthRedirect>,
   },
-  {
-    path: "/mylist",
-    element: <MyListPage />,
+  // Redirect to /home if already logged in
+  function AuthRedirect({ children }) {
+    const token = useAuthStore.getState().token;
+    if (token) {
+      return <Navigate to="/home" replace />;
+    }
+    return children;
   },
+  // Protected routes
   {
-    path: "/series",
-    element: <SeriesPage />,
-  },
-  {
-    path: "/film",
-    element: <FilmPage />,
-  },
-  {
-    path: "/userprofile",
-    element: <UserProfile />,
+    element: <ProtectedRoute />,
+    children: [
+      { path: "/home", element: <Home /> },
+      { path: "/mylist", element: <MyListPage /> },
+      { path: "/series", element: <SeriesPage /> },
+      { path: "/film", element: <FilmPage /> },
+      { path: "/userprofile", element: <UserProfile /> },
+    ],
   },
 ]);
 

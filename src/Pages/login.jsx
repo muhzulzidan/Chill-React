@@ -37,7 +37,7 @@ const LoginPage = () => {
       setIsLoading(true);
       const response = await api.post("/auth/login", { username, password });
       const { token } = response.data;
-
+      console.log(response.data, "response.data")
       // You can decode the token or fetch user info if needed
       login({ username, token });
       // Log the token and global state after login
