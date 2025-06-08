@@ -1,37 +1,44 @@
-import { useRef } from "react";
+import { useRef, useMemo, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Arrow from "../Elements/Arrow/Arrow.jsx"; // Pastikan path ini benar
 import MovieDetailModal from "../Elements/Container/MovieDetailModal.jsx"; // Pastikan path ini benar
 import ContinueWatching from "../Elements/ContinueWatch/ContinueWatching.jsx"; // Path ke komponen yang sudah ada
-import useFetchMovies from "../../hooks/useFetchMovies.js";
 import useMovieStore from '../../store/useMovieStore.js';
 
 const ContinueWatchingFilm = () => {
-  const { movies, loading, error } = useFetchMovies("/api/movies/movie/now_playing");
-  const { selectedMovie, setSelectedMovie, clearSelectedMovie } = useMovieStore();
+  const { movies, fetchMovies, selectedMovie, setSelectedMovie, clearSelectedMovie } = useMovieStore();
+  // Fetch movies on mount (best practice for Zustand async data)
+  useEffect(() => {
+    fetchMovies();
+    // eslint-disable-next-line
+  }, []);
   const sliderRef = useRef(null);
   const sliderItemHeight = "h-[162px]";
+  console.log(movies, "movies ContinueWatchingFilm")
+  // Filter only movies (type: 'Film')
+  const nowPlayingMovies = useMemo(() =>
+    movies.filter((movie) => movie.type === 'Film'),
+    [movies]
+  );
 
-  if (loading) return <div className={`${sliderItemHeight} flex justify-center items-center w-full`}><p>Loading movies...</p></div>;
-  if (error) return <div className={`${sliderItemHeight} flex justify-center items-center w-full`}><p>Error: {error.message}</p></div>;
-  if (!movies || movies.length === 0) return <div className={`${sliderItemHeight} flex justify-center items-center w-full`}><p>No movies to display.</p></div>;
+  if (!nowPlayingMovies || nowPlayingMovies.length === 0) return <div className={`${sliderItemHeight} flex justify-center items-center w-full`}><p>No movies to display.</p></div>;
 
   const slidesToShowCount = 4;
 
   const settings = {
     dots: false,
-    infinite: movies.length > slidesToShowCount, // Sesuaikan dengan slidesToShowCount
+    infinite: nowPlayingMovies.length > slidesToShowCount,
     speed: 700,
     slidesToShow: slidesToShowCount,
     slidesToScroll: slidesToShowCount,
     arrows: false,
     responsive: [
       {
-        breakpoint: 1280,  
+        breakpoint: 1280,
         settings: {
-          slidesToShow: slidesToShowCount, // 4 item pada 1280px
+          slidesToShow: slidesToShowCount,
           slidesToScroll: slidesToShowCount,
         },
       },
@@ -59,11 +66,10 @@ const ContinueWatchingFilm = () => {
     ],
   };
 
-  // Padding untuk gap 24px antar item
   const itemPadding = "px-[12px]";
 
   return (
-    <div className={`relative w-full ${sliderItemHeight} group`}>  
+    <div className={`relative w-full ${sliderItemHeight} group`}>
       <Arrow
         onScrollLeft={() => sliderRef.current?.slickPrev()}
         onScrollRight={() => sliderRef.current?.slickNext()}
@@ -72,14 +78,14 @@ const ContinueWatchingFilm = () => {
       <Slider
         ref={sliderRef}
         {...settings}
-        className="h-full"  
+        className="h-full"
       >
-        {movies.map((movie) => (
-          <div key={movie.id} className={`${sliderItemHeight} ${itemPadding}`}>
+        {nowPlayingMovies.map((movie) => (
+          <div key={movie.id || movie._id} className={`${sliderItemHeight} ${itemPadding}`}>
             <ContinueWatching
               movie={movie}
               onClick={() => setSelectedMovie(movie)}
-              className="w-full h-full"  
+              className="w-full h-full"
             />
           </div>
         ))}

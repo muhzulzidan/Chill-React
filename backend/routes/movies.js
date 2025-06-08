@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 
 const express = require('express');
 const router = express.Router();
@@ -25,6 +27,17 @@ const Movie = mongoose.models.Movie || mongoose.model('Movie', movieSchema);
 function getRandomSample(arr, n) {
   return arr.sort(() => 0.5 - Math.random()).slice(0, n);
 }
+
+// Get all movies and series
+router.get('/', async (req, res) => {
+  try {
+    const allMovies = await Movie.find({});
+    res.json({ results: allMovies });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 
 // /movie/now_playing: Return random 10 films
 router.get('/movie/now_playing', async (req, res) => {
