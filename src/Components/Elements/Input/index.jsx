@@ -10,7 +10,7 @@ const InputForm = ({ label, name, type, placeholder, img, onChange, value }) => 
   };
 
   return (
-    <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto gap-1.5 my-4">
+    <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto gap-1.5">
       <Label htmlFor={name}>{label}</Label>
       <div className="relative">
         <Input

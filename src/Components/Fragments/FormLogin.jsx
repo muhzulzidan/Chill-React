@@ -3,7 +3,7 @@ import Forgot from "../Elements/Input/Forgot.jsx";
 
 const FormLogin = ({ formData, onInputChange, onSubmit }) => {
   return (
-    <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto">
+    <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto gap-4 flex flex-col">
       <InputForm
         onSubmit={onSubmit}
         label="Username"

@@ -1,6 +1,8 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const authRoutes = require('./auth/server.js'); // Ensure correct import of auth routes
 const moviesRoutes = require("./routes/movies");
 const app = express();
@@ -9,6 +11,7 @@ const PORT = 5001;
 console.log('Auth routes:', authRoutes); // Debugging log
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB

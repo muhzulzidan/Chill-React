@@ -2,51 +2,50 @@ import Logo from "../Elements/Logo/Logo.jsx";
 
 const Footer = () => {
   return (
-    <div className="w-full h-auto text-white py-8 sm:py-[60px] px-6 md:px-20 lg:px-80 gap-5">
-      <div className="w-full h-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-6">
-        <div className="flex flex-col justify-between items-start gap-2 md:gap-4 lg:gap-6">
+    <footer className="w-full bg-[#18181B] text-white py-8">
+      <div className="container max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-6 px-4">
+        {/* Logo and Copyright */}
+        <div className="flex flex-col justify-between items-start gap-2 md:gap-4 lg:gap-6 mb-6 md:mb-0">
           <Logo textHide={false} />
           <p className="font-poppins text-xs md:text-sm lg:text-base font-normal leading-[20.4px] tracking-[0.2px] text-[#C1C2C4]">
             © 2025 Chill. All Rights Reserved
           </p>
         </div>
 
-        <div className="hidden md:flex justify-between items-center h-full md:gap-16 lg:gap-40">
-          <div className="flex flex-col justify-between items-start h-full">
-            <p className="text-white text-sm md:text-base font-bold leading-[22.4px] tracking-[0.2px]">
-              Genre
-            </p>
-            <div className="flex justify-center items-center gap-5 md:gap-7">
-              <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium leading-[22.4px] tracking-[0.2px]">
-                <p>Aksi</p>
-                <p>Anak-anak</p>
-                <p>Anime</p>
-                <p>Britania</p>
-              </div>
-              <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium leading-[22.4px] tracking-[0.2px]">
-                <p>Drama</p>
-                <p>Fantasi Ilmiah & Fantasi</p>
-                <p>Kejahatan</p>
-                <p>KDrama</p>
-              </div>
-              <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium leading-[22.4px] tracking-[0.2px]">
-                <p>Komedi</p>
-                <p>Petualangan</p>
-                <p>Perang</p>
-                <p>Romantis</p>
-              </div>
-              <div className="h-full flex flex-col gap-3 text-grey text-sm md:text-base font-medium leading-[22.4px] tracking-[0.2px]">
-                <p>Sains & Alam</p>
-                <p>Thriller</p>
-              </div>
+        {/* Desktop Genre & Bantuan */}
+        <div className="hidden md:grid grid-cols-4 gap-12 flex-1">
+          {/* Genre Columns */}
+          <div className="flex flex-col">
+            <p className="text-white text-sm md:text-base font-bold mb-3">Genre</p>
+            <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium">
+              <p>Aksi</p>
+              <p>Anak-anak</p>
+              <p>Anime</p>
+              <p>Britania</p>
             </div>
           </div>
-
-          <div className="h-full flex flex-col justify-center gap-4">
-            <p className="text-white text-sm md:text-base font-bold leading-[22.4px] tracking-[0.2px]">
-              Bantuan
-            </p>
-            <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium leading-[22.4px] tracking-[0.2px]">
+          <div className="flex flex-col mt-8 md:mt-11">
+            <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium">
+              <p>Drama</p>
+              <p>Fantasi Ilmiah & Fantasi</p>
+              <p>Kejahatan</p>
+              <p>KDrama</p>
+            </div>
+          </div>
+          <div className="flex flex-col mt-8 md:mt-11">
+            <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium">
+              <p>Komedi</p>
+              <p>Petualangan</p>
+              <p>Perang</p>
+              <p>Romantis</p>
+              <p>Sains & Alam</p>
+              <p>Thriller</p>
+            </div>
+          </div>
+          {/* Bantuan Section */}
+          <div className="flex flex-col">
+            <p className="text-white text-sm md:text-base font-bold mb-3">Bantuan</p>
+            <div className="flex flex-col gap-3 text-grey text-sm md:text-base font-medium">
               <p>FAQ</p>
               <p>Kontak Kami</p>
               <p>Privasi</p>
@@ -71,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -7,11 +7,11 @@ const Hero = (props) => {
         <img
           src={image}
           alt={title}
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#101213DB] to-[#181A1C]"></div>
       </div>
-      <div className="absolute w-4/5 h-[118px] sm:h-[233px] gap-3 sm:gap-10 flex flex-col justify-center bottom-8 sm:bottom-20">
+      <div className="absolute  h-[118px] sm:h-[233px] gap-3 sm:gap-10 flex flex-col justify-center bottom-8 sm:bottom-20 left-1/2 -translate-x-1/2 w-full container  mx-auto max-w-screen-xl px-4">
         <div className="w-full sm:w-[730px] gap-5">
           <h1 className="text-white text-2xl sm:text-5xl font-bold leading-[52.8px] sm:mb-5">
             {title}

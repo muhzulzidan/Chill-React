@@ -7,7 +7,7 @@ import useFetchMovies from "../../hooks/useFetchMovies.js";
 import melanjutkanData from "../../../db.json"; // Import data dari db.json
 
 const Trending = () => {
-  const { movies, loading, error } = useFetchMovies("/api/movies");
+  const { movies, loading, error } = useFetchMovies("/api/movies/movie/popular");
   const [hoveredMovie, setHoveredMovie] = useState(null);
   const [hoverCardStyle, setHoverCardStyle] = useState({
     opacity: 0,

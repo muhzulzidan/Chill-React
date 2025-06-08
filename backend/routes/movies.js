@@ -1,57 +1,70 @@
-const express = require("express");
-const api = require("../api"); // Import the Axios instance
 
+const express = require('express');
 const router = express.Router();
-router.get("/details", async (req, res) => {
-    const { id } = req.query;
-    try {
-        const response = await api.get("/", { params: { i: id } });
-        res.json(response.data || {});
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: "Failed to fetch movie details" });
-    }
+const mongoose = require('mongoose');
+
+// Movie schema (should match your importDb.js)
+const movieSchema = new mongoose.Schema({
+  id: Number,
+  title: String,
+  description: String,
+  image: String,
+  rating: {
+    imdb: String,
+    rotten_tomatoes: String
+  },
+  type: String,
+  genre: [String],
+  age_rating: String,
+  episodes: Number,
+  duration: String
 });
-// Routes
-router.get("/now-playing", async (req, res) => {
-  const movies = await api.get("movie/now_playing");
-  res.json(movies.data.results);
+const Movie = mongoose.models.Movie || mongoose.model('Movie', movieSchema);
+
+// Helper: get random sample
+function getRandomSample(arr, n) {
+  return arr.sort(() => 0.5 - Math.random()).slice(0, n);
+}
+
+// /movie/now_playing: Return random 10 films
+router.get('/movie/now_playing', async (req, res) => {
+  const movies = await Movie.find({ type: 'Film' });
+  res.json({ results: getRandomSample(movies, 10) });
 });
 
-router.get("/popular", async (req, res) => {
-  const movies = await api.get("movie/popular");
-  res.json(movies.data.results);
+// /movie/popular: Return random 10 films (could be improved with a 'popular' field)
+router.get('/movie/popular', async (req, res) => {
+  const movies = await Movie.find({ type: 'Film' });
+  res.json({ results: getRandomSample(movies, 10) });
 });
 
-router.get("/trending", async (req, res) => {
-  const movies = await api.get("movie/top_rated");
-  res.json(movies.data.results);
+// /movie/top_rated: Return top 10 by imdb rating
+router.get('/movie/top_rated', async (req, res) => {
+  const movies = await Movie.find({ type: 'Film' });
+  const sorted = movies.sort((a, b) => {
+    const aRating = parseFloat((a.rating.imdb || '0').split('/')[0]);
+    const bRating = parseFloat((b.rating.imdb || '0').split('/')[0]);
+    return bRating - aRating;
+  });
+  res.json({ results: sorted.slice(0, 10) });
 });
 
-router.get("/new-release", async (req, res) => {
-  const movies = await api.get("movie/upcoming");
-  res.json(movies.data.results);
+// /movie/upcoming: Return random 10 films (could be improved with a 'release_date' field)
+router.get('/movie/upcoming', async (req, res) => {
+  const movies = await Movie.find({ type: 'Film' });
+  res.json({ results: getRandomSample(movies, 10) });
 });
 
-router.get("/watching-series", async (req, res) => {
-  const movies = await api.get("tv/airing_today");
-  res.json(movies.data.results);
+// /tv/airing_today: Return random 10 series
+router.get('/tv/airing_today', async (req, res) => {
+  const series = await Movie.find({ type: 'Serial TV' });
+  res.json({ results: getRandomSample(series, 10) });
 });
 
-router.get("/offering", async (req, res) => {
-  const movies = await api.get("tv/popular");
-  res.json(movies.data.results);
-});
-
-router.get("/search", async (req, res) => {
-  const { title } = req.query;
-  try {
-    const response = await api.get("/", { params: { s: title } });
-    res.json(response.data.Search || []);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Failed to fetch movies" });
-  }
+// /tv/popular: Return random 10 series
+router.get('/tv/popular', async (req, res) => {
+  const series = await Movie.find({ type: 'Serial TV' });
+  res.json({ results: getRandomSample(series, 10) });
 });
 
 module.exports = router;

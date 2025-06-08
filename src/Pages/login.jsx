@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "../api/axiosConfig";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import useAuthStore from "./../store/useAuthStore";
@@ -11,6 +12,8 @@ const LoginPage = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const navigate = useNavigate();
   const login = useAuthStore((state) => state.login);
+  // const user = useAuthStore((state) => state.user);
+  // const token = useAuthStore((state) => state.token);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e) => {
@@ -23,35 +26,37 @@ const LoginPage = () => {
   
   const handleLogin = async (e) => {
     e.preventDefault();
-    const { username } = formData;
+    const { username, password } = formData;
 
-    if (!username) {
-      toast.error("Harap isi username!");
+    if (!username || !password) {
+      toast.error("Harap isi username dan password!");
       return;
     }
 
-    try { 
+    try {
       setIsLoading(true);
-      
-      // Simulate API call with timeout
+      const response = await api.post("/auth/login", { username, password });
+      const { token } = response.data;
+
+      // You can decode the token or fetch user info if needed
+      login({ username, token });
+      // Log the token and global state after login
       setTimeout(() => {
-        // Demo user data
-        const demoUser = {
-          username: username,
-          email: `${username}@example.com`,
-          avatar: "https://ui-avatars.com/api/?name=" + username,
-        };
-        
-        toast.success("Login Berhasil");
-        login(demoUser);
-        
-        setIsLoading(false);
-        navigate("/home");
-      }, 1000);
-    } catch (error) {
-      console.error("Login error:", error);
-      toast.error("Terjadi kesalahan, coba lagi nanti.");
+        console.log('Current Zustand user:', useAuthStore.getState().user);
+        console.log('Current Zustand token:', useAuthStore.getState().token);
+      }, 0);
+      toast.success("Login Berhasil");
       setIsLoading(false);
+      navigate("/home");
+    } catch (error) {
+      setIsLoading(false);
+      if (error.response && error.response.status === 401) {
+        toast.error("Password salah!");
+      } else if (error.response && error.response.status === 404) {
+        toast.error("User tidak ditemukan!");
+      } else {
+        toast.error("Terjadi kesalahan, coba lagi nanti.");
+      }
     }
   };
 

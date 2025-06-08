@@ -10,7 +10,7 @@ import MyListPage from "./Pages/mylist";
 import SeriesPage from "./Pages/series";
 import FilmPage from "./Pages/film";
 import UserProfile from "./Pages/userProfile";
-import App from "./App";
+
 
 const router = createBrowserRouter([
   {

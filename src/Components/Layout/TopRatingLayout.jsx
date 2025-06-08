@@ -5,7 +5,7 @@ import TopRating from "../Fragments/TopRating.jsx";       // Pastikan path ini b
 
 const TopRatingLayout = () => {
   return (
-    <div className="flex flex-col items-center w-full max-w-[1280px] mx-auto py-6 sm:py-10 gap-6"
+    <div className="flex flex-col items-center w-full max-w-[1280px] mx-auto py-6 sm:py-10 gap-6 container px-4"
     >
       <HeadingTitle title="Top Rating Film dan Series Hari ini" />
       <TopRating />

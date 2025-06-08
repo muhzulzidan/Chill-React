@@ -7,7 +7,7 @@ import useFetchMovies from "../../hooks/useFetchMovies.js";
 import melanjutkanData from "../../../db.json";
 
 const TopRating = () => {
-  const { movies, loading, error } = useFetchMovies("/api/movies");
+  const { movies, loading, error } = useFetchMovies("/api/movies/movie/top_rated");
   const [hoveredMovie, setHoveredMovie] = useState(null);
   const [hoverCardStyle, setHoverCardStyle] = useState({
     opacity: 0,
@@ -127,7 +127,7 @@ const TopRating = () => {
       <Arrow
         onScrollLeft={() => sliderRef.current?.slickPrev()}
         onScrollRight={() => sliderRef.current?.slickNext()}
-        className="absolute top-1/2 -translate-y-1/2 -left-1 -right-1 sm:-left-2 sm:-right-2 z-20 pointer-events-auto"
+        className="absolute top-1/2 -translate-y-1/2 -left-1 -right-1 sm:-left-2 sm:-right-2 lg:left-4 lg:right-4 z-20 pointer-events-auto"
       />
 
       <div className="mx-auto w-[calc(100%-30px)] sm:w-[calc(100%-50px)]">

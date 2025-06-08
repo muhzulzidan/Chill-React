@@ -8,7 +8,7 @@ import Footer from "../Components/Fragments/Footer.jsx";
 
 const Home = () => {
   return (
-    <div className="bg-[#181A1C] flex flex-col gap-12">
+    <div className="bg-[#181A1C] flex flex-col gap-12 overflow-x-hidden">
       <Navbar hideLogoText={true} />
       <ComponentHero
         heroTitle="Duty After School"

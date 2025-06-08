@@ -9,7 +9,7 @@ import useFetchMovies from "../../hooks/useFetchMovies.js";
 import useMovieStore from "../../store/useMovieStore.js";
 
 const ContinueWatchingSeries = () => {
-  const { movies, loading, error } = useFetchMovies("/api/Melanjutkan");
+  const { movies, loading, error } = useFetchMovies("/api/movies/movie/now_playing");
   const { selectedMovie, setSelectedMovie, clearSelectedMovie } =
     useMovieStore();
   const sliderRef = useRef(null);

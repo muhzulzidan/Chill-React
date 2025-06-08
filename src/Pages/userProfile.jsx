@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
+
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-
 import useMyListStore from "./../store/useMyListStore";
 import useAuthStore from "./../store/useAuthStore";
 import WelcomeText from "../Components/Elements/WelcomeText/WelcomeText.jsx";
@@ -11,6 +12,16 @@ import api from "./../api/axiosConfig";
 import Navbar from "../Components/Fragments/Navbar.jsx";
 import Footer from "../Components/Fragments/Footer.jsx";
 
+// Fetch user profile from backend using JWT
+const fetchUserProfile = async (token) => {
+  const response = await api.get("/auth/profile", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return response.data;
+};
+
 const UserProfile = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -19,18 +30,31 @@ const UserProfile = () => {
   });
 
   const { myList, fetchMyList } = useMyListStore();
-  const { user } = useAuthStore();
+
+  const { user, token } = useAuthStore();
+  const [profile, setProfile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Fetch profile from backend on mount
   useEffect(() => {
-    console.log("User saat ini:", user);
-    if (user?.id) {
-      fetchMyList(user.id);
-    } else {
-      console.error("⚠️ User belum login atau ID tidak tersedia!");
+    if (!token) {
+      toast.error("Anda belum login!");
+      navigate("/login");
+      return;
     }
-  }, [fetchMyList, user]);
+    fetchUserProfile(token)
+      .then((data) => {
+        setProfile(data);
+        setFormData((prev) => ({ ...prev, username: data.username }));
+        if (data._id) fetchMyList(data._id);
+      })
+      .catch((err) => {
+        toast.error("Gagal mengambil profil. Silakan login ulang.");
+        navigate("/login");
+      });
+    // eslint-disable-next-line
+  }, [token]);
 
   // Mengupdate nilai input saat diketik
   const handleInputChange = (e) => {
@@ -41,17 +65,17 @@ const UserProfile = () => {
     }));
   };
 
-  // Fungsi untuk update password
+  // Fungsi untuk update username (dan password jika diinginkan)
   const handleUpdatePassword = async (e) => {
     e.preventDefault();
     const { username, password, confirmPassword } = formData;
 
-    if (!username || !password || !confirmPassword) {
-      toast.error("Harap isi semua field!");
+    if (!username) {
+      toast.error("Harap isi username!");
       return;
     }
 
-    if (password !== confirmPassword) {
+    if (password && password !== confirmPassword) {
       toast.error("Kata sandi tidak cocok!");
       return;
     }
@@ -59,59 +83,41 @@ const UserProfile = () => {
     setIsLoading(true);
 
     try {
-      const { data: users } = await api.get("/users");
-      const user = users.find((u) => u.username === username);
-
-      if (!user) {
-        toast.error("User tidak ditemukan!");
-        setIsLoading(false);
-        return;
-      }
-
-      // Update password pada user yang sudah ada
-      await api.put(`/users/${user.id}`, {
-        username: user.username,
-        password: password,
-        email: user.email,
-      });
-
-      toast.success("Kata sandi berhasil diperbarui!");
-      setFormData({ username: "", password: "", confirmPassword: "" });
-
-      setTimeout(() => {
-        setIsLoading(false);
-        navigate("/login");
-      }, 2000);
+      // Only send password if user wants to change it
+      const payload = password ? { username, password } : { username };
+      await api.put(
+        "/auth/profile",
+        payload,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      toast.success("Profil berhasil diperbarui!");
+      setFormData({ ...formData, password: "", confirmPassword: "" });
+      // Optionally, refetch profile
+      fetchUserProfile(token).then((data) => setProfile(data));
     } catch (error) {
-      console.error("Update password error:", error);
-      toast.error("Gagal memperbarui kata sandi");
+      if (error.response && error.response.data && error.response.data.message) {
+        toast.error(error.response.data.message);
+      } else {
+        toast.error("Gagal memperbarui profil");
+      }
+    } finally {
       setIsLoading(false);
     }
   };
 
-  // Fungsi untuk hapus akun
+  // Fungsi untuk hapus akun (menggunakan endpoint baru)
   const handleDeleteAccount = async () => {
-    const { username } = formData;
-
-    if (!username) {
-      toast.error("Harap isi username untuk menghapus akun!");
-      return;
-    }
-
     setIsLoading(true);
-
     try {
-      const { data: users } = await api.get("/users");
-      const user = users.find((u) => u.username === username);
-
-      if (!user) {
-        toast.error("User tidak ditemukan!");
-        setIsLoading(false);
-        return;
-      }
-
-      await api.delete(`/users/${user.id}`);
-
+      await api.delete("/auth/profile", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       toast.success("Akun berhasil dihapus!");
       setTimeout(() => {
         setIsLoading(false);
@@ -128,17 +134,18 @@ const UserProfile = () => {
     <div className="relative flex flex-col justify-center bg-[#181A1C] w-full min-h-screen">
       <ToastContainer position="top-right" autoClose={5000} theme="colored" />
       <Navbar />
-      <div className="flex flex-col justify-center gap-2 w-full h-full px-4 sm:px-20 mt-12">
-        <div className="hidden sm:block">
+      <div className="flex flex-col justify-center gap-2 w-full h-full px-4 mt-12 max-w-screen-xl mx-auto container">
+        {/* <div className="hidden sm:block">
           <WelcomeText title="Profile Saya" />
-        </div>
+        </div> */}
         <div className="flex flex-col sm:flex-row w-full gap-8 ">
           {/* Form Profile (Di Kiri Saat Desktop, Di Bawah Saat Mobile) */}
           <div className="block sm:hidden">
             <WelcomeText title="Profile Saya" />
           </div>
           <div className="w-full sm:w-1/2 flex flex-col items-start order-1 sm:order-none">
-            <div className="flex gap-4 mx-6 sm:mx-0">
+            <WelcomeText title="Profile Saya" />
+            <div className="flex gap-4 mx-6 sm:mx-0 py-4">
               <img
                 className="w-20 sm:w-20 h-20 sm:h-20 rounded-full"
                 src="/avatar.png"
@@ -178,6 +185,8 @@ const UserProfile = () => {
                 />
               </fieldset>
 
+              {/* Email field placeholder, backend does not provide email yet */}
+              {/*
               <fieldset className="relative">
                 <label className="absolute text-[#9D9EA1] text-sm sm:text-base z-10 px-4 py-2">
                   Email
@@ -185,10 +194,11 @@ const UserProfile = () => {
                 <input
                   type="text"
                   className="relative border border-[#E7E3FC3B] bg-[#22282A] text-[#9D9EA1] text-base sm:text-lg font-medium w-full h-16 px-4 pt-4 rounded-lg disabled outline-none pointer-events-none"
-                  value="user@example.com"
+                  value={profile?.email || "Belum tersedia"}
                   disabled
                 />
               </fieldset>
+              */}
 
               <fieldset className="relative">
                 <label className="absolute text-[#9D9EA1] text-sm sm:text-base z-10 px-4 py-2">
@@ -272,10 +282,10 @@ const UserProfile = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center w-full h-auto py-6 sm:py-20 sm:my-0 px-2 sm:px-24 gap-4 sm:gap-8">
+      <div className="flex flex-col justify-center items-center w-full h-auto py-6 sm:py-20 sm:my-0 px-2 container max-w-screen-xl mx-auto gap-4 sm:gap-8">
         <HeadingTitle title="Daftar Saya" />
 
-        {!user ? (
+        {!profile ? (
           <p className="text-gray-400">
             Silakan login untuk melihat daftar film Anda.
           </p>
